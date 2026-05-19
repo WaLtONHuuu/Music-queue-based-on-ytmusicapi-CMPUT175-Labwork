@@ -3,6 +3,7 @@
 # Lab 5 - Music Queue
 #
 # ~ Created by CMPUT 175 Team ~
+# ~ Modified by Chen Hu ~
 # =================================================================
 
 def time_to_seconds(time_str):
@@ -104,7 +105,6 @@ class MusicQueue:
         Working:
         This function nqueues the Song object to the back of the queue
         '''
-        # TODO: Implement this function
         self.items.append(item)
         self.length += item.get_duration()
 
@@ -115,7 +115,6 @@ class MusicQueue:
         Working:
         This function enqueues the Song object to the front of the queue
         '''
-        # TODO: Implement this function
         self.items.insert(0,item)
         self.length += item.get_duration()
             
@@ -127,7 +126,6 @@ class MusicQueue:
         This function dequeues the Song from the top of the queue and return it
         if queue is empty it should raise an exception
         '''
-        # TODO: Implement this function
         if self.is_empty():
             raise IndexError("Error: Queue is empty")
         removed_element = self.items.pop(0)
@@ -142,7 +140,6 @@ class MusicQueue:
         This function returns the front-most item in the queue, and DOES NOT change the queue.
         if queue is empty it should raise an exception
         """
-        # TODO: Implement this function   
         if self.is_empty():
             raise IndexError("Invalid peek: empty queue")
         return self.items[0]
@@ -152,7 +149,6 @@ class MusicQueue:
         Input: None
         Returns: True if the queue is empty, False otherwise
         """
-        # TODO: Implement this function
         return len(self.items)==0
             
     def size(self):  # get to know the size of the queue method
@@ -160,7 +156,6 @@ class MusicQueue:
         Input: None
         Returns: The number of items in the queue
         """        
-        # TODO: Implement this function
         return len(self.items)
            
     def clear(self):  # delete elements in queue method
@@ -171,7 +166,6 @@ class MusicQueue:
         This function removes all items from the queue, and sets the size to 0    
         clear() should not change the capacity 
         """
-        # TODO: Implement this function       
         self.items=[]
         self.length=0
 
